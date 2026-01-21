@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Q8</title>
+</head>
+<body>
+    <h3>Input Validation</h3>
+
+<input type="text" id="txt">
+<button onclick="validate()">Submit</button>
+<p id="msg"></p>
+
+<script>
+function validate() {
+    let t = document.getElementById("txt").value;
+    if (t === "")
+        document.getElementById("msg").innerHTML = "⚠ Field cannot be empty";
+    else
+        document.getElementById("msg").innerHTML = "Input Accepted";
+}
+</script>
+</body>
+</html>

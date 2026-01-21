@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Q2</title>
+</head>
+<body>
+    <h3>Square and Cube</h3>
+
+<input type="number" id="n">
+<button onclick="calculate()">Show</button>
+
+<p id="out"></p>
+
+<script>
+function calculate() {
+    let x = document.getElementById("n").value;
+    document.getElementById("out").innerHTML =
+        "Square = " + (x*x) + "<br>Cube = " + (x*x*x);
+}
+</script>
+</body>
+</html>
