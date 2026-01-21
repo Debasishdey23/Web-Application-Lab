@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION 3</title>
+    <script>
+        function add(){
+            var x = Number(document.getElementById("n1").value);
+            var y = Number(document.getElementById("n2").value);
+
+            document.getElementById("res").innerHTML = "Sum = " + (x+y);
+        }
+      </script>
+  
+</head>
+
+<body style="background-color: white;">
+    <div id="divv">
+        <input type ="num1" id = "n1" placeholder="Enter the first number">
+        <br>
+        <input type ="num2" id = "n2" placeholder="Enter the second number">
+        <br>
+        <button id="button" onclick="add()"> Click to add the numbers</button>
+        <p id = 'res'></p>
+    </div>
+    
+</body>
+
+</html>

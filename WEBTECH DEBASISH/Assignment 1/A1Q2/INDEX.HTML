@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION 2</title>
+</head>
+
+<body style="background-color: white;">
+    <div id="divv">
+        <button id="button"> Change the paragraph </button>
+        <p id="par">This is a paragraph, This World is very _________ (Bad)</p>
+    </div>
+    <script>
+        let button = document.getElementById("button")
+
+        let par = document.getElementById("par")
+
+        button.addEventListener("click", () => {
+            alert("Button is clicked")
+            par.innerText = "The world is good..."
+
+        })
+    </script>
+
+</body>
+
+</html>
