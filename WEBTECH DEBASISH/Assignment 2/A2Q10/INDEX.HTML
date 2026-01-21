@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Q10</title>
+</head>
+<body>
+    <h3>Toggle Text & Color</h3>
+
+<p id="text">Hello World</p>
+<button onclick="change()">Change</button>
+
+<script>
+let flag = true;
+function change() {
+    let p = document.getElementById("text");
+    if (flag) {
+        p.innerHTML = "Welcome to JavaScript";
+        p.style.color = "red";
+    } else {
+        p.innerHTML = "Hello World";
+        p.style.color = "blue";
+    }
+    flag = !flag;
+}
+</script>
+</body>
+</html>
