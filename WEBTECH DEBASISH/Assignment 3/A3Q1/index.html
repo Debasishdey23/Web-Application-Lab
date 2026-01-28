@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A3Q1 - Number to Words</title>
+</head>
+<body>
+
+<h2>Number to Words (0–999)</h2>
+
+<input type="text" id="num" placeholder="Enter number (0-999)">
+<button onclick="convert()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function convert() {
+    var n = document.getElementById("num").value;
+
+    // Check for empty input
+    if (n === "") {
+        document.getElementById("result").innerHTML = "Please enter a number";
+        return;
+    }
+
+    // Check for non-numeric input
+    if (!/^\d+$/.test(n)) {
+        document.getElementById("result").innerHTML = "Only numbers are allowed";
+        return;
+    }
+
+    // Check range
+    n = parseInt(n);
+    if (n < 0 || n > 999) {
+        document.getElementById("result").innerHTML = "Enter number between 0 and 999 only";
+        return;
+    }
+
+    var ones = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
+    var teens = ["Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen",
+                 "Sixteen","Seventeen","Eighteen","Nineteen"];
+    var tens = ["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+
+    var words = "";
+
+    if (n < 10) {
+        words = ones[n];
+    }
+    else if (n < 20) {
+        words = teens[n - 10];
+    }
+    else if (n < 100) {
+        words = tens[Math.floor(n / 10)] + 
+                (n % 10 !== 0 ? " " + ones[n % 10] : "");
+    }
+    else {
+        words = ones[Math.floor(n / 100)] + " Hundred" +
+                (n % 100 !== 0 ? " " : "");
+
+        var rem = n % 100;
+        if (rem < 10 && rem !== 0)
+            words += ones[rem];
+        else if (rem < 20 && rem >= 10)
+            words += teens[rem - 10];
+        else if (rem >= 20)
+            words += tens[Math.floor(rem / 10)] +
+                     (rem % 10 !== 0 ? " " + ones[rem % 10] : "");
+    }
+
+    document.getElementById("result").innerHTML = "In words: " + words;
+}
+</script>
+
+</body>
+</html>

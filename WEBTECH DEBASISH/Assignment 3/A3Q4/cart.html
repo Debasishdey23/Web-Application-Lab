@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let table = document.getElementById("cartTable");
+            let total = 0;
+
+            table.innerHTML = `
+                <tr>
+                    <th>Product</th>
+                    <th>Price (₹)</th>
+                    <th>Qty</th>
+                </tr>
+            `;
+
+            cart.forEach(item => {
+                total += item.price * item.qty;
+                table.innerHTML += `
+                    <tr>
+                        <td>${item.product}</td>
+                        <td>${item.price}</td>
+                        <td>${item.qty}</td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById("total").innerHTML = total;
+        }
+
+        function clearCart() {
+            localStorage.removeItem("cart");
+            loadCart();
+        }
+    </script>
+</head>
+
+<body onload="loadCart()">
+<div class="container">
+
+<h2>Your Cart</h2>
+
+<table id="cartTable"></table>
+
+<p><b>Total:</b> ₹<span id="total">0</span></p>
+
+<button onclick="clearCart()">Clear Cart</button>
+
+</div>
+</body>
+</html>

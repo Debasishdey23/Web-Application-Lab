@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styling Demo</title>
+
+    <style>
+        /* ===== Global Styles ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8 url("https://via.placeholder.com/200")
+                        no-repeat top right; /* no-repeat */
+            color: #333;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 6px;
+        }
+
+        /* ===== Font Styles ===== */
+        .font-one {
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        .font-two {
+            font-family: "Courier New", monospace;
+            font-style: italic;
+            color: #8e44ad;
+        }
+
+        /* ===== Background Repeat Demo ===== */
+        .repeat-bg {
+            background: url("https://via.placeholder.com/60") repeat;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* ===== Link Styles ===== */
+        a {
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        a:link {
+            color: #2980b9;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:visited {
+            color: #8e44ad;
+        }
+
+        a:hover {
+            background: #ecf0f1;
+            color: #e74c3c;
+            cursor: hand; /* custom cursor on hover */
+        }
+
+        a:active {
+            color: white;
+            background: #27ae60;
+            cursor: wait;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CSS Features Demonstration</h1>
+
+    <!-- Font Styles Section -->
+    <section>
+        <h2>Different Font Styles</h2>
+        <p class="font-one">
+            This paragraph uses <b>Verdana</b> font for clear readability.
+        </p>
+        <p class="font-two">
+            This text uses <b>Courier New</b> font with italic style.
+        </p>
+    </section>
+
+    <!-- Background Repeat Section -->
+    <section>
+        <h2>Background Image Control</h2>
+        <p>
+            The page background uses <b>background-repeat: no-repeat</b>.
+        </p>
+
+        <div class="repeat-bg">
+            This box demonstrates <b>background-repeat: repeat</b>.
+        </div>
+    </section>
+
+    <!-- Link Styling Section -->
+    <section>
+        <h2>Link Styling & Custom Cursors</h2>
+        <p>
+            Try interacting with this link:
+            <a href="#">Hover & Click Me</a>
+        </p>
+        <ul>
+            <li><b>a:link</b> – default link style</li>
+            <li><b>a:visited</b> – visited link color</li>
+            <li><b>a:hover</b> – hover effect with custom cursor</li>
+            <li><b>a:active</b> – active click style</li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 CSS Demonstration Page
+</footer>
+
+</body>
+</html>

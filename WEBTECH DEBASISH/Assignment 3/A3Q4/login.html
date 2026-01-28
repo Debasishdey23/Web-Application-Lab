@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function loginRedirect() {
+            parent.mainFrame.location = "catalogue.html";
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+<div class="container">
+
+<h2>Login</h2>
+
+<form onsubmit="return loginRedirect();">
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <input type="submit" value="Login">
+</form>
+
+</div>
+</body>
+</html>
